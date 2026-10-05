@@ -1,0 +1,32 @@
+# demo inventory for api/dev_seed.py, no real hosts behind it
+
+hosts:
+  - name: atlas
+    ip: 10.0.0.11
+    role: gateway
+    ssh_user: monitor
+    tiers: [fast, medium, slow]
+
+  - name: borealis
+    ip: 10.0.0.12
+    role: web
+    ssh_user: monitor
+    tiers: [fast, medium, slow]
+
+  - name: cygnus
+    ip: 10.0.0.13
+    role: storage
+    ssh_user: monitor
+    tiers: [fast, medium, slow]
+
+  - name: draco
+    ip: 10.0.0.14
+    role: build
+    ssh_user: monitor
+    tiers: [fast, medium, slow]
+
+  - name: eridani
+    ip: 10.0.0.15
+    role: backup
+    ssh_user: monitor
+    tiers: [fast, medium, slow]

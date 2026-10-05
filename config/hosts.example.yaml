@@ -1,0 +1,22 @@
+# copy to hosts.yaml and edit. the monitoring host watches itself over SSH like any other host.
+#
+# ssh_user     read-only account used by the collectors
+# admin_user   optional, enables service control, power actions and the web shell
+# tiers        which collection cycles run on this host
+
+hosts:
+  - name: pc3
+    ip: 192.168.1.72
+    role: server
+    ssh_user: monitor
+    admin_user: svmctl
+    expected_services: []
+    tiers: [fast, medium, slow]
+
+  - name: pc4
+    ip: 192.168.1.73
+    role: server
+    ssh_user: monitor
+    admin_user: svmctl
+    expected_services: []
+    tiers: [fast, medium, slow]

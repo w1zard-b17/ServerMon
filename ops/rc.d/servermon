@@ -1,0 +1,17 @@
+#!/bin/ksh
+#
+# rc.d script for the collection engine (main.py).
+# template: provision.sh replaces __PROJECT__ and __USER__ and installs it in /etc/rc.d
+#
+# the wrapper execs python, so the running process no longer matches the default pexp.
+# pexp is set after sourcing rc.subr, which would otherwise overwrite it.
+
+daemon="__PROJECT__/bin/run-engine.sh"
+daemon_user="__USER__"
+
+. /etc/rc.d/rc.subr
+
+pexp="__PROJECT__/v/bin/python main.py"
+rc_bg=YES
+
+rc_cmd $1

@@ -1,0 +1,13 @@
+# install inside the virtualenv:  v/bin/pip install -r requirements.txt
+schedule
+starlette
+uvicorn
+itsdangerous
+websockets
+
+# compiled packages: on OpenBSD install them with pkg_add and create the venv with
+# --system-site-packages so it can see them
+#   pkg_add py3-cryptography py3-bcrypt py3-paramiko py3-yaml
+# elsewhere they install from pip as usual
+#   paramiko
+#   pyyaml

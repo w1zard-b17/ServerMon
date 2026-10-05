@@ -1,0 +1,15 @@
+#!/bin/ksh
+#
+# rc.d script for the dashboard API (api/server.py).
+# template: provision.sh replaces __PROJECT__ and __USER__ and installs it in /etc/rc.d
+# see ops/rc.d/servermon for why pexp is set after sourcing rc.subr.
+
+daemon="__PROJECT__/bin/run-dashboard.sh"
+daemon_user="__USER__"
+
+. /etc/rc.d/rc.subr
+
+pexp="__PROJECT__/v/bin/python -m api.server"
+rc_bg=YES
+
+rc_cmd $1

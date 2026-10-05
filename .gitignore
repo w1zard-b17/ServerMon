@@ -1,0 +1,19 @@
+# python
+__pycache__/
+*.pyc
+/v/
+/.venv/
+
+# runtime, created by provision.sh
+/bin/
+/logs/
+*.db
+*.db-wal
+*.db-shm
+
+# local inventory, see config/hosts.example.yaml
+config/hosts.yaml
+
+# frontend
+dashboard/node_modules/
+dashboard/dist/
